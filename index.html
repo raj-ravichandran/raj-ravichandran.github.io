@@ -656,12 +656,12 @@
     }, delay);
   });
 
-  // Visit counter
+  // Visit counter using counterapi.dev
   (async () => {
     try {
-      const res = await fetch('https://api.countapi.xyz/hit/rajkumar-r-portfolio/visits');
+      const res = await fetch('https://api.counterapi.dev/v1/rajkumar-r-portfolio/visits/up');
       const data = await res.json();
-      document.getElementById('visitCount').textContent = data.value.toLocaleString();
+      document.getElementById('visitCount').textContent = data.count.toLocaleString();
     } catch(e) {
       document.getElementById('visitCount').textContent = '—';
     }
