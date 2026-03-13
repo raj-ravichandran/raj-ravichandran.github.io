@@ -620,7 +620,8 @@
     <div class="visit-badge" title="Total portfolio visits">
       <span class="visit-dot"></span>
       <span class="visit-label">visitors</span>
-      <span class="visit-count" id="visitCount">—</span>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fraj-ravichandran.github.io&count_bg=%234f9eff&title_bg=%230c1120&icon=&icon_color=%23ffffff&title=&edge_flat=true"
+           style="height:18px;border-radius:3px;vertical-align:middle;" alt="visitor count"/>
     </div>
     <div class="footer-right">
       Rajkumar Ravichandran&nbsp;<span class="blink"></span>
@@ -656,16 +657,7 @@
     }, delay);
   });
 
-  // Visit counter using counterapi.dev
-  (async () => {
-    try {
-      const res = await fetch('https://api.counterapi.dev/v1/rajkumar-r-portfolio/visits/up');
-      const data = await res.json();
-      document.getElementById('visitCount').textContent = data.count.toLocaleString();
-    } catch(e) {
-      document.getElementById('visitCount').textContent = '—';
-    }
-  })();
+// visitor counter via hits.seeyoufarm.com badge
 
   // Accordion
   let isOpen = true;
