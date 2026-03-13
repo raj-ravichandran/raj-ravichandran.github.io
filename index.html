@@ -363,14 +363,57 @@
   .visit-count { color: var(--accent); font-weight: 700; min-width: 24px; }
 
   @media (max-width: 768px) {
+    /* NAV */
     nav { padding: 14px 20px; }
-    .nav-links { gap: 16px; }
-    .hero { padding: 100px 20px 60px; }
-    .section-inner { padding: 60px 20px; }
-    .exp-header { padding: 20px; flex-wrap: wrap; }
-    .exp-body-inner { padding: 0 20px 20px; }
-    .metrics-row { grid-template-columns: 1fr; }
-    footer { flex-direction: column; gap: 8px; text-align: center; }
+    .nav-logo { font-size: 11px; }
+    .nav-links { gap: 14px; }
+    .nav-links a { font-size: 9px; }
+
+    /* HERO */
+    .hero { padding: 100px 20px 60px; align-items: flex-start; }
+    .hero h1 { font-size: clamp(48px, 14vw, 72px); }
+    .hero-badge { font-size: 9px; padding: 5px 12px; }
+    .hero-desc { font-size: 11px; line-height: 1.9; }
+    .hero-btns { flex-direction: column; gap: 10px; }
+    .btn { text-align: center; width: 100%; padding: 14px 20px; }
+    .hero-terminal { display: none; }
+
+    /* SECTIONS */
+    .section-inner { padding: 56px 20px; }
+    .section-title { font-size: clamp(26px, 7vw, 38px); margin-bottom: 32px; }
+
+    /* SKILLS */
+    .skills-grid { grid-template-columns: 1fr 1fr; }
+    .skill-card { padding: 22px 18px; }
+    .skill-items { font-size: 12px; }
+
+    /* EXPERIENCE */
+    .exp-header { padding: 20px; flex-wrap: wrap; gap: 12px; }
+    .exp-company { font-size: 17px; }
+    .exp-meta { text-align: left; }
+    .exp-body-inner { padding: 0 16px 20px; gap: 12px; }
+    .achievement { padding: 14px 16px; gap: 12px; }
+    .ach-text { font-size: 12.5px; }
+
+    /* STACK */
+    .stack-tag { font-size: 10px; padding: 6px 12px; }
+    .edu-card { padding: 24px 20px; gap: 16px; }
+    .edu-degree { font-size: 16px; }
+
+    /* CONTACT */
+    .contact-grid { grid-template-columns: 1fr; gap: 32px; }
+    .contact-headline { font-size: clamp(28px, 8vw, 40px); }
+    .contact-link { padding: 14px 16px; font-size: 10px; }
+    .cl-icon { font-size: 15px; }
+
+    /* FOOTER */
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+    .visit-badge { justify-content: center; }
+  }
+
+  @media (max-width: 400px) {
+    .skills-grid { grid-template-columns: 1fr; }
+    .hero h1 { font-size: 44px; }
   }
 </style>
 </head>
