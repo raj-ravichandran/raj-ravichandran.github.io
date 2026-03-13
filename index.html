@@ -362,58 +362,83 @@
   .visit-label { color: var(--muted); letter-spacing: 0.1em; text-transform: uppercase; }
   .visit-count { color: var(--accent); font-weight: 700; min-width: 24px; }
 
+  /* ── TABLET ── */
+  @media (max-width: 1024px) {
+    .section-inner { padding: 80px 36px; }
+    nav { padding: 16px 36px; }
+    .hero { padding: 120px 36px 80px; }
+  }
+
+  /* ── MOBILE ── */
   @media (max-width: 768px) {
     /* NAV */
-    nav { padding: 14px 20px; }
+    nav { padding: 12px 18px; }
     .nav-logo { font-size: 11px; }
-    .nav-links { gap: 14px; }
-    .nav-links a { font-size: 9px; }
+    .nav-links { gap: 12px; }
+    .nav-links a { font-size: 9px; letter-spacing: 0.08em; }
 
     /* HERO */
-    .hero { padding: 100px 20px 60px; align-items: flex-start; }
-    .hero h1 { font-size: clamp(48px, 14vw, 72px); }
-    .hero-badge { font-size: 9px; padding: 5px 12px; }
-    .hero-desc { font-size: 11px; line-height: 1.9; }
-    .hero-btns { flex-direction: column; gap: 10px; }
-    .btn { text-align: center; width: 100%; padding: 14px 20px; }
+    .hero { padding: 90px 18px 56px; align-items: flex-start; }
+    .hero-content { max-width: 100%; }
+    .hero h1 { font-size: clamp(46px, 13vw, 70px); margin-bottom: 22px; }
+    .hero-badge { font-size: 9px; padding: 5px 12px; margin-bottom: 22px; }
+    .hero-desc { font-size: 11px; line-height: 1.9; margin-bottom: 32px; }
+    .hero-btns { flex-direction: column; gap: 10px; width: 100%; }
+    .btn { text-align: center; width: 100%; padding: 14px 20px; font-size: 11px; }
     .hero-terminal { display: none; }
 
     /* SECTIONS */
-    .section-inner { padding: 56px 20px; }
-    .section-title { font-size: clamp(26px, 7vw, 38px); margin-bottom: 32px; }
+    .section-inner { padding: 52px 18px; }
+    .section-title { font-size: clamp(24px, 7vw, 36px); margin-bottom: 28px; }
 
     /* SKILLS */
     .skills-grid { grid-template-columns: 1fr 1fr; }
-    .skill-card { padding: 22px 18px; }
-    .skill-items { font-size: 12px; }
+    .skill-card { padding: 20px 16px; }
+    .skill-icon { font-size: 18px; margin-bottom: 10px; }
+    .skill-cat { font-size: 8px; }
+    .skill-items { font-size: 12px; line-height: 1.8; }
 
     /* EXPERIENCE */
-    .exp-header { padding: 20px; flex-wrap: wrap; gap: 12px; }
-    .exp-company { font-size: 17px; }
-    .exp-meta { text-align: left; }
-    .exp-body-inner { padding: 0 16px 20px; gap: 12px; }
-    .achievement { padding: 14px 16px; gap: 12px; }
-    .ach-text { font-size: 12.5px; }
+    .exp-header { padding: 18px; flex-wrap: wrap; gap: 10px; }
+    .exp-company { font-size: 16px; }
+    .exp-role { font-size: 10px; }
+    .exp-meta { text-align: left; width: 100%; }
+    .exp-toggle { margin-left: auto; }
+    .exp-body-inner { padding: 0 14px 18px; gap: 10px; }
+    .achievement { padding: 12px 14px; gap: 10px; flex-wrap: nowrap; }
+    .ach-icon { font-size: 15px; }
+    .ach-text { font-size: 12px; line-height: 1.7; }
 
-    /* STACK */
-    .stack-tag { font-size: 10px; padding: 6px 12px; }
-    .edu-card { padding: 24px 20px; gap: 16px; }
-    .edu-degree { font-size: 16px; }
+    /* STACK TAGS */
+    .stack-grid { gap: 8px; margin-bottom: 36px; }
+    .stack-tag { font-size: 10px; padding: 6px 11px; }
+    .edu-card { padding: 22px 18px; gap: 14px; flex-direction: row; align-items: flex-start; }
+    .edu-icon { font-size: 36px; }
+    .edu-degree { font-size: 15px; }
+    .edu-school { font-size: 10px; }
+    .edu-meta { font-size: 9px; }
 
     /* CONTACT */
-    .contact-grid { grid-template-columns: 1fr; gap: 32px; }
-    .contact-headline { font-size: clamp(28px, 8vw, 40px); }
-    .contact-link { padding: 14px 16px; font-size: 10px; }
+    .contact-grid { grid-template-columns: 1fr; gap: 28px; }
+    .contact-headline { font-size: clamp(26px, 9vw, 40px); }
+    .contact-sub { font-size: 11px; }
+    .contact-links { gap: 10px; }
+    .contact-link { padding: 14px 16px; font-size: 10px; border-radius: 8px; }
     .cl-icon { font-size: 15px; }
 
     /* FOOTER */
-    footer { flex-direction: column; gap: 12px; text-align: center; padding: 20px; }
+    footer { flex-direction: column; gap: 12px; text-align: center; padding: 18px 20px; }
     .visit-badge { justify-content: center; }
+    .footer-right { justify-content: center; }
   }
 
+  /* ── SMALL PHONES ── */
   @media (max-width: 400px) {
     .skills-grid { grid-template-columns: 1fr; }
-    .hero h1 { font-size: 44px; }
+    .hero h1 { font-size: 42px; }
+    nav { padding: 12px 14px; }
+    .nav-links { gap: 10px; }
+    .section-inner { padding: 44px 14px; }
   }
 </style>
 </head>
@@ -600,9 +625,9 @@
         <p class="contact-sub">Backend engineer with deep expertise in real-time infrastructure, Redis engineering, and high-throughput systems. Currently at Zoho — open to backend, infrastructure, or distributed systems roles.</p>
       </div>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#f5879e87949fc6c6c6c7b59298949c99db969a98" class="contact-link">
-          <span class="cl-icon">✉️</span><span><span class="__cf_email__" data-cfemail="7e0c150c1f144d4d4d4c3e19131f1712501d1113">[email&#160;protected]</span></span>
-        </a>
+        <div class="contact-link" style="cursor:default;">
+          <span class="cl-icon">✉️</span><span>rkraj3332&#64;gmail&#46;com</span>
+        </div>
 <a href="https://www.linkedin.com/in/rajkumar-ravichandran-a4a33b14b/" target="_blank" class="contact-link">
           <span class="cl-icon">💼</span><span>Know more about me →</span>
         </a>
@@ -631,7 +656,8 @@
   </div>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
+
   // Scroll progress
   window.addEventListener('scroll', () => {
     const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
